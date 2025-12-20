@@ -1,0 +1,490 @@
+/* Base */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  color:#111;
+}
+h1, h2{
+  text-align:center;
+  margin:4px 0;
+  letter-spacing:0.2px;
+}
+
+/* ================= MAIN TOP TABLE ================= */
+.test-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-box input {
+  display: none;
+}
+
+.test-box span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #000;
+}
+
+.test-box input:checked + span {
+  background: #000;
+}
+
+.check {
+  width: 6%;
+  text-align: center;      /* ⬅center horizontal */
+  vertical-align: middle;  /* ⬅center vertical */
+}
+
+/* NAME INPUT */
+.name-input {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 3px 6px;
+  font-size: 14px;
+}
+
+.name-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* GENDER */
+.gender-cell {
+  vertical-align: middle;
+  text-align: left;   
+  padding-left: 11px;
+}
+
+.gender-option {
+  display: flex;              
+  align-items: center;
+  gap: 7px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.gender-option input {
+  display: none;
+}
+
+/* kotak */
+.gender-option .square {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+}
+
+.gender-option input:checked + .square {
+  background: #000;
+}
+
+.gender-text {
+  text-align: left;
+}
+
+.form-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+
+.form-table td{
+  border:1px solid #a97c50;
+  font-size:20px;
+  padding:6px;
+  vertical-align:middle;
+}
+
+/* LEFT LABEL */
+.label{
+  background:#f6efe8;
+  width:18%;
+  text-align:center;
+  font-weight:bold;
+}
+
+/* COLUMNS */
+.topik{ width:22%; text-align:center; }
+.level{ width:18%; }
+.check{ width:6%; }
+
+/* DIGIT BOX */
+.digit{
+  border:1px solid #a97c50;
+  text-align:center;
+  font-weight:bold;
+  height:32px;
+}
+
+/* PHOTO */
+.photo-cell{
+  width:22%;
+  padding:8px;
+  vertical-align:top;
+}
+
+.photo-box{
+  width:30mm;
+  height:40mm;
+  border:1px solid #999;
+  text-align:center;
+  font-size:20px;
+  line-height:1.4;
+  padding-top:6mm;
+  box-sizing:border-box;
+  margin:0 auto;
+}
+
+/* ================= YELLOW SECTION ================= */
+
+.yellow-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+  margin-top:20px;
+}
+.yellow-table td{
+  border:1px solid #000;
+  font-size:20px; 
+  padding:6px;
+  vertical-align:middle;
+}
+.blank {
+  height: 28px;
+  border: 1px solid #000;
+}
+.center {
+  text-align: center;
+  vertical-align: middle;
+}
+.square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.y-label, .y-sub {
+  background: #fff200;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+}
+.hint-row {
+  font-weight: bold;
+  letter-spacing: 0.1px;
+}
+.en {
+  color: #444;
+}
+
+/* Inputs and inline boxes to mimic printed boxes */
+.y-input{
+  height:28px;
+}
+.center{
+  text-align:center;
+}
+.small{
+  font-size:12px;
+}
+
+/* Visual checkboxes: square boxes aligned like print */
+.checkbox{ width:18px; text-align:center; }
+
+/* Bilingual hint style for instruction row */
+.hint-row{
+  font-weight:bold;
+  letter-spacing:0.1px;
+}
+.kr{ font-weight:bold; }
+.en{ color:#444; }
+
+/* Email middle @ to be perfectly centered */
+.email-at{
+  font-weight:bold; letter-spacing:0.5px;
+}
+
+/* Make long empty cells look like writable boxes */
+.blank{
+  height:28px; border:1px solid #000;
+}
+
+
+/* Tighten row heights to match the scan */
+.yellow-table tr{ line-height:1.2; }
+
+/* Print adjustments (optional for A4) */
+@page { size: A4; margin: 12mm; }
+
+@media print{
+  body{ margin:0; }
+  h1,h2{ margin:2mm 0; }
+}
+
+/* === GUIDELINES === */
+.guidelines{
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  font-size: 22px;
+}
+
+.guide-text{
+  font-family: inherit;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+/*==== SUBMIT BUTTON ====*/
+.submit-wrapper {
+  text-align: right;   
+  margin-top: 20px;
+}
+
+.submit-btn {
+  padding: 12px 32px;     
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.submit-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/*=== Nationality ===*/
+
+.nationality-input {
+  width: 95%;
+  height: 50px;
+  border: 1px solid #000;
+  padding: 4px 6px;
+  font-size: 20px;
+  box-sizing: border-box;
+
+display: block;
+  margin: 0 auto;  
+}
+
+.nationality-input {
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+
+
+/* === OCCUPATION === */
+.occupation-cell {
+  vertical-align: top;
+}
+
+.occupation-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 4px 0;
+}
+
+.occupation-option input {
+  display: none;
+}
+
+.occupation-option .square {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #000;
+}
+
+.occupation-option input:checked + .square {
+  background: #000;
+}
+
+/* === Date of Birth === */
+.dob-cell {
+  padding: 8px 12px;
+  text-align: center;       
+  vertical-align: middle;    
+}
+
+/* Korean text guide */
+.dob-guide {
+  color: #999;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+/* Bold brackets */
+.dob-bold {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input line */
+.dob-input-line {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 17px;
+}
+
+/* Date input */
+.dob-input {
+  width: 300px;
+  height: 50px;
+  border: 1px solid #000;
+  padding: 2px 6px;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: center;  
+}
+
+/* Age input */
+.age-input {
+  width: 120px;       
+  height: 50px;        
+  border: 1px solid #000;
+  font-size: 20px;   
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* ADDRESS */
+.address-cell {
+  vertical-align: middle;
+  padding: 8px 12px;
+}
+
+/* Address inpt */
+.address-input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #000;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: center; 
+  
+}
+
+/* === PHONE === */
+
+.phone-input {
+  width: 25%;
+  height: 50px; 
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Country code dropdown */
+.country-code {
+  width: 25%;
+  height: 50px; 
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Placeholder text */
+.phone-input::placeholder {
+  font-size: 20px;
+  color: #888;
+}
+
+
+/* === EMAIL === */
+.email-cell {
+  vertical-align: middle;
+  padding: 8px 12px;
+}
+
+.email-input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #000;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Placeholder kelabu */
+.email-input::placeholder {
+  color: #999;
+  font-size: 20px;
+}
+/* === MOTIVE === */
+
+/* inner table */
+.inner-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* checkbox style */
+.check-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.check-option input {
+  display: none;
+}
+
+.check-option .square {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #000;
+}
+
+.check-option input:checked + .square {
+  background: #000;
+}
+
+
+/* === PHOTO === */
+
+.photo-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #999;
+  text-align: center;
+}
+
+/* TEXT */
+.photo-text {
+  margin-top: 60px;
+}
+
+/* BUTTON CENTER */
+.photo-btn {
+  position: absolute;
+  top: 85%;                 /* 🔧 adjust sini */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  padding: 6px 14px;
+  border: 1px solid #000;
+  background: #f5f5f5;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

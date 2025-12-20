@@ -1,0 +1,230 @@
+<!-- ================= PERSONAL DETAILS (YELLOW) ================= -->
+
+<!-- NAME + GENDER + NATIONALITY + OCCUPATION -->
+<tr>
+  
+  <!-- NAME LABEL -->
+  <td class="y-label" rowspan="3">성명<br>Name</td>
+
+  <!-- INSTRUCTION -->
+  <td colspan="2" class="y-label center small hint-row">
+    여권기재와 동일하게 기입할 것!<br>
+    <span class="en">Please write Name in IC card or Passport</span>
+  </td>
+
+  <!-- GENDER LABEL -->
+  <td class="y-label">⑥ 성별<br>Gender</td>
+
+  <!-- NATIONALITY LABEL -->
+  <td class="y-label">⑦ 국적<br>Nationality</td>
+
+  <!-- OCCUPATION LABEL -->
+  <td class="y-label">⑧ 직업<br>Occupation</td>
+</tr> 
+
+<tr>
+  <!-- KOREAN LABEL -->
+  <td class="y-sub">④ 한글<br>Korean</td>
+
+  <!-- KOREAN NAME INPUT -->
+  <td>
+    <input 
+      type="text"
+      id="koreanName"
+      name="koreanName"
+      class="name-input"
+      id="koreanName"
+      placeholder="(Korean Name is for Korean only)"
+      required> <!-- required -->
+  </td>
+
+  <!-- GENDER INPUT -->
+  <td rowspan="2" class="small gender-cell">
+    <label class="gender-option">
+      <input type="radio" name="gender" value="Male" required> <!-- required -->
+      <span class="square"></span>
+      <span class="gender-text">남자 &lt;Male&gt;</span>
+    </label>
+
+    <label class="gender-option">
+      <input type="radio" name="gender" value="Female" required> <!-- required -->
+      <span class="square"></span>
+      <span class="gender-text">여자 &lt;Female&gt;</span>
+    </label>
+  </td>
+
+ <!-- NATIONALITY INPUT -->
+<td rowspan="2">
+  <input 
+    type="text"
+    id="nationality"
+    name="nationality"
+    class="nationality-input"
+    list="nationalityList"
+    placeholder="Type nationality"
+    required>
+</td>
+
+<!-- NATIONALITY DATALIST (WAJIB ADA) -->
+<datalist id="nationalityList"></datalist>
+
+  <!-- OCCUPATION INPUT -->
+  <td rowspan="4" class="small occupation-cell">
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Student" required> <!-- ✅ required -->
+      <span class="square"></span> 1. 학생 (Student)
+    </label><br>
+
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Civil Servant" required>
+      <span class="square"></span> 2. 공무원 (Civil Servant)
+    </label><br>
+
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Company Employee" required>
+      <span class="square"></span> 3. 회사원 (Company Employee)
+    </label><br>
+
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Self-employed" required>
+      <span class="square"></span> 4. 자영업 (Self-employer)
+    </label><br>
+
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Homemaker" required>
+      <span class="square"></span> 5. 주부 (Homemaker)
+    </label><br>
+
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Teacher" required>
+      <span class="square"></span> 6. 교사 (Teacher)
+    </label><br>
+
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Unemployed" required>
+      <span class="square"></span> 7. 무직 (Unemployed)
+    </label><br>
+
+    <label class="occupation-option">
+      <input type="radio" name="occupation" value="Other" required>
+      <span class="square"></span> 8. 기타 (Other)
+    </label>
+  </td>
+</tr>
+
+<tr>
+  <!-- ENGLISH LABEL -->
+  <td class="y-sub">⑤ 영문<br>English</td>
+
+  <!-- ENGLISH NAME INPUT -->
+  <td>
+    <input 
+      type="text"
+      id="englishName"
+      name="englishName"
+      class="name-input"
+      placeholder=""
+      required> <!-- required -->
+  </td>
+</tr> 
+
+<!-- ================= DATE OF BIRTH ================= -->
+
+<tr>
+  <!-- DOB LABEL -->
+  <td class="y-label">⑨ 생년월일<br>Date of Birth</td>
+
+  <!-- DOB INPUT -->
+  <td colspan="4" class="dob-cell">
+    <div class="dob-wrapper">
+
+      <div class="dob-guide">
+        년 &nbsp;&nbsp; 월 &nbsp;&nbsp; 일 
+        <span class="dob-bold">(만 &nbsp;&nbsp; 세)</span>
+      </div>
+
+      <div class="dob-input-line">
+        <input 
+          type="text"
+          id="dobIntl"
+          class="dob-input"
+          placeholder="yyyy/mm/dd"
+          required> <!-- required -->
+
+        <span class="dob-bold">Age: </span>
+
+        <input
+          type="number"
+          id="age"
+          class="age-input"
+          min="0"
+          max="120"
+          step="1"
+          required> <!-- required -->
+      </div>
+
+    </div>
+  </td>
+</tr>
+
+<!-- ADDRESS -->
+<tr>
+  <td class="y-label">⑩ 주소<br>Address</td>
+  <td colspan="4" class="address-cell">
+    <input
+      type="text"
+      id="address"
+      class="address-input"
+      placeholder="Please enter your address"
+      required> <!-- required -->
+  </td>
+</tr>
+
+<!-- TELEPHONE -->
+<tr>
+  <td class="y-label" rowspan="2">전화번호<br>Telephone</td>
+  <td class="y-sub">자택<br>Home</td>
+  <td colspan="4">
+    <input
+      type="text"
+      id="homePhone"
+      class="phone-input"
+      placeholder="Home phone (optional)">
+      <!-- NOT required (optional) -->
+  </td>
+</tr>
+
+<tr>
+  <td class="y-sub">핸드폰<br>Mobile</td>
+  <td colspan="4" class="mobile-cell">
+    <select id="countryCode" class="country-code" required> <!-- required -->
+      <option value="">Code</option>
+    </select>
+
+    <input
+       type="tel"
+       id="mobilePhone"
+       inputmode="numeric"
+       pattern="[0-9]*"
+       class="phone-input"
+       placeholder="Mobile number"
+       required> <!-- required -->
+  </td>
+</tr>
+
+<!-- EMAIL -->
+<tr>
+  <td class="y-label">이메일<br>E-mail</td>
+
+  <td colspan="5" class="email-cell">
+    <input 
+      type="email"
+      id="email"
+      name="email"
+      class="email-input"
+      placeholder="example@email.com"
+      required
+      oninvalid="this.setCustomValidity('Please enter a valid email address')"
+      oninput="this.setCustomValidity('')">
+  </td>
+</tr>
