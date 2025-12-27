@@ -469,7 +469,7 @@ display: block;
 /* BUTTON CENTER */
 .photo-btn {
   position: absolute;
-  top: 85%;                 /* 🔧 adjust sini */
+  top: 85%;                 /* untuk adjust di sini */
   left: 50%;
   transform: translate(-50%, -50%);
   

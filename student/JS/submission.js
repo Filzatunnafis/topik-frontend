@@ -106,6 +106,11 @@ function buildFormData() {
   );
 
   fd.append(
+  "calling_code",
+  document.getElementById("countryCode")?.value || ""
+  );
+
+  fd.append(
     "mobile_phone",
     document.getElementById("mobilePhone")?.value || ""
   );
@@ -134,6 +139,11 @@ function buildFormData() {
   const photoInput = document.getElementById("photoInput");
   if (photoInput?.files.length) {
     fd.append("photo", photoInput.files[0]);
+  }
+  
+  console.log("FORM DATA:");
+  for (let pair of fd.entries()) {
+    console.log(pair[0], ":", pair[1]);
   }
 
   return fd;

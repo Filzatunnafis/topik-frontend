@@ -197,13 +197,18 @@
 <tr>
   <td class="y-sub">핸드폰<br>Mobile</td>
   <td colspan="4" class="mobile-cell">
-    <select id="countryCode" class="country-code" required> <!-- required -->
-      <option value="">Code</option>
+    <select 
+    id="countryCode" 
+    name="calling_code"
+    class="country-code" 
+    required> <!-- required -->
+    <option value="">Code</option>
     </select>
 
     <input
        type="tel"
        id="mobilePhone"
+       name="mobile_phone"
        inputmode="numeric"
        pattern="[0-9]*"
        class="phone-input"

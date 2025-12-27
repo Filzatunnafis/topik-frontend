@@ -135,6 +135,8 @@ function validateMobilePhone() {
     return false;
   }
 
+  mobile.value = mobile.value.replace(/^0+/, "");
+
   return true;
 }
 
